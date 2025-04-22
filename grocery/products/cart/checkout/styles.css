@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #E3F2FD;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #1976D2;
+    color: white;
+    align-items: center;
+    nav {
+    display: flex;
+    align-items: center;}
+    }
+    nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+    }
+    .sign {
+        background: white;
+        color: #000000;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;}
+   
+
+
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.payment-method, .order-summary {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+button {
+    background: #00BCD4;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #008C9E;
+}
+
+#order-items {
+    margin: 20px 0;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Harvest Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">🛒Harvest Hub</h1>
+        <nav>
+            <a href="../../products.html">Products</a>
+            <button class="sign" onclick="window.location.href='../../../index.html'">Logout</button>
+        </nav>
+    </header>
+
+    <div class="checkout-container">
+        <div class="payment-method">
+            <h2>Payment Method</h2>
+            <p>Choose your preferred payment option</p>
+
+            <label>
+                <input type="radio" name="payment" value="card" checked>
+                <span class="icon">💳</span> Pay with Card (Stripe)
+            </label><br>
+
+            <label>
+                <input type="radio" name="payment" value="cod">
+                <span class="icon">💵</span> Cash on Delivery
+            </label><br>
+
+            <button id="pay-now">Pay now</button>
+        </div>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p>Review your items before placing the order</p>
+            <div id="order-items"></div>
+            <p><strong>Total:</strong> $<span id="total-price">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

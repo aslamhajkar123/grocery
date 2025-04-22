@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Harvest Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">🛒 Harvest Hub  </h1>
+        <nav>
+            <input type="text" placeholder="Search for groceries..." class="search-bar">
+            <a href="products.html">Products</a>
+            <a href="cart/cart.html" class="cart-icon" id="cart-link">🛒 <span id="cart-count">0</span></a>
+            <button class="sign" onclick="window.location.href='../index.html'">Logout</button>
+        </nav>
+    </header>
+
+    <div class="top-filter-bar">
+    <div class="price-range-filter">
+        <label for="min-price">Min:</label>
+        <input type="number" id="min-price" placeholder="Min">
+        <label for="max-price">Max:</label>
+        <input type="number" id="max-price" placeholder="Max">
+    </div>
+    <div class="filter-button-group">
+        <div class="filter-group">
+            <input type="checkbox" id="fruits" value="Fruits">
+            <button type="button" class="filter-button-label" data-filter="Fruits">Fruits</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="vegetables" value="Vegetables">
+            <button type="button" class="filter-button-label" data-filter="Vegetables">Vegetables</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="canned-goods" value="Canned Goods">
+            <button type="button" class="filter-button-label" data-filter="Canned Goods">Canned</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="dairy" value="Dairy">
+            <button type="button" class="filter-button-label" data-filter="Dairy">Dairy</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="meat" value="Meat">
+            <button type="button" class="filter-button-label" data-filter="Meat">Meat</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="fish-seafood" value="Fish & Seafood">
+            <button type="button" class="filter-button-label" data-filter="Fish & Seafood">Seafood</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="deli" value="Deli">
+            <button type="button" class="filter-button-label" data-filter="Deli">Deli</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="condiments-spices" value="Condiments & Spices">
+            <button type="button" class="filter-button-label" data-filter="Condiments & Spices">Spices</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="snacks" value="Snacks">
+            <button type="button" class="filter-button-label" data-filter="Snacks">Snacks</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="bread-bakery" value="Bread & Bakery">
+            <button type="button" class="filter-button-label" data-filter="Bread & Bakery">Bakery</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="beverages" value="Beverages">
+            <button type="button" class="filter-button-label" data-filter="Beverages">Drinks</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="pasta-rice-cereal" value="Pasta, Rice & Cereal">
+            <button type="button" class="filter-button-label" data-filter="Pasta, Rice & Cereal">Pasta/Rice</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="baking" value="Baking">
+            <button type="button" class="filter-button-label" data-filter="Baking">Baking</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="frozen-foods" value="Frozen Foods">
+            <button type="button" class="filter-button-label" data-filter="Frozen Foods">Frozen</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="personal-care" value="Personal Care">
+            <button type="button" class="filter-button-label" data-filter="Personal Care">Personal</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="health-care" value="Health Care">
+            <button type="button" class="filter-button-label" data-filter="Health Care">Health</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="household-cleaning" value="Household & Cleaning Supplies">
+            <button type="button" class="filter-button-label" data-filter="Household & Cleaning Supplies">Household</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="baby-items" value="Baby Items">
+            <button type="button" class="filter-button-label" data-filter="Baby Items">Baby</button>
+        </div>
+        <div class="filter-group">
+            <input type="checkbox" id="pet-care" value="Pet Care">
+            <button type="button" class="filter-button-label" data-filter="Pet Care">Pet</button>
+        </div>
+    </div>
+    <button class="apply-filters">Apply Filters</button>
+    <button class="clear-filters">Clear all filters</button>
+</div>
+
+        <main class="products-section">
+            <center><h1>Our Products</h1></center>
+
+            <section class="product-category" id="fruits">
+                <h3>Fruits</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/apple.jpg" alt="Apple">
+                        <h3>Apple</h3>
+                        <p class="category">Fruits</p>
+                        <p class="price">₹50.00/kg</p>
+                        <button class="add-to-cart" data-name="Apple" data-price="50.00" data-image="apple.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/banana.jpg" alt="Banana">
+                        <h3>Banana</h3>
+                        <p class="category">Fruits</p>
+                        <p class="price">₹30.00/dozen</p>
+                        <button class="add-to-cart" data-name="Banana" data-price="30.00" data-image="banana.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/grapes.jpg" alt="Grapes">
+                        <h3>Grapes</h3>
+                        <p class="category">Fruits</p>
+                        <p class="price">₹80.00/kg</p>
+                        <button class="add-to-cart" data-name="Grapes" data-price="80.00" data-image="grapes.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/orange.jpg" alt="Orange">
+                        <h3>Orange</h3>
+                        <p class="category">Fruits</p>
+                        <p class="price">₹40.00/kg</p>
+                        <button class="add-to-cart" data-name="Orange" data-price="40.00" data-image="orange.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/strawberry.jpg" alt="Strawberry">
+                        <h3>Strawberry</h3>
+                        <p class="category">Fruits</p>
+                        <p class="price">₹120.00/pack</p>
+                        <button class="add-to-cart" data-name="Strawberry" data-price="120.00" data-image="strawberry.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/avocado.jpg" alt="Avocado">
+                        <h3>Avocado</h3>
+                        <p class="category">Fruits</p>
+                        <p class="price">₹90.00/piece</p>
+                        <button class="add-to-cart" data-name="Avocado" data-price="90.00" data-image="avocado.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/peach.jpg" alt="Peach">
+                        <h3>Peach</h3>
+                        <p class="category">Fruits</p>
+                        <p class="price">₹70.00/kg</p>
+                        <button class="add-to-cart" data-name="Peach" data-price="70.00" data-image="peach.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="vegetables">
+                <h3>Vegetables</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/potato.jpg" alt="Potato">
+                        <h3>Potato</h3>
+                        <p class="category">Vegetables</p>
+                        <p class="price">₹25.00/kg</p>
+                        <button class="add-to-cart" data-name="Potato" data-price="25.00" data-image="potato.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/onion.jpg" alt="Onion">
+                        <h3>Onion</h3>
+                        <p class="category">Vegetables</p>
+                        <p class="price">₹40.00/kg</p>
+                        <button class="add-to-cart" data-name="Onion" data-price="40.00" data-image="onion.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/carrot.jpg" alt="Carrot">
+                        <h3>Carrot</h3>
+                        <p class="category">Vegetables</p>
+                        <p class="price">₹30.00/kg</p>
+                        <button class="add-to-cart" data-name="Carrot" data-price="30.00" data-image="carrot.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/salad_greens.jpg" alt="Salad Greens">
+                        <h3>Salad Greens</h3>
+                        <p class="category">Vegetables</p>
+                        <p class="price">₹60.00/pack</p>
+                        <button class="add-to-cart" data-name="Salad Greens" data-price="60.00" data-image="salad_greens.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/broccoli.jpg" alt="Broccoli">
+                        <h3>Broccoli</h3>
+                        <p class="category">Vegetables</p>
+                        <p class="price">₹70.00/kg</p>
+                        <button class="add-to-cart" data-name="Broccoli" data-price="70.00" data-image="broccoli.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/pepper.jpg" alt="Bell Pepper">
+                        <h3>Bell Pepper</h3>
+                        <p class="category">Vegetables</p>
+                        <p class="price">₹80.00/kg</p>
+                        <button class="add-to-cart" data-name="Bell Pepper" data-price="80.00" data-image="pepper.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/tomato.jpg" alt="Tomato">
+                        <h3>Tomato</h3>
+                        <p class="category">Vegetables</p>
+                        <p class="price">₹50.00/kg</p>
+                        <button class="add-to-cart" data-name="Tomato" data-price="50.00" data-image="tomato.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/cucumber.jpg" alt="Cucumber">
+                        <h3>Cucumber</h3>
+                        <p class="category">Vegetables</p>
+                        <p class="price">₹35.00/kg</p>
+                        <button class="add-to-cart" data-name="Cucumber" data-price="35.00" data-image="cucumber.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="canned-goods">
+                <h3>Canned Goods</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/canned_soup.jpg" alt="Canned Soup">
+                        <h3>Canned Soup</h3>
+                        <p class="category">Canned Goods</p>
+                        <p class="price">₹60.00/can</p>
+                        <button class="add-to-cart" data-name="Canned Soup" data-price="60.00" data-image="canned_soup.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/canned_tuna.jpg" alt="Canned Tuna">
+                        <h3>Canned Tuna</h3>
+                        <p class="category">Canned Goods</p>
+                        <p class="price">₹80.00/can</p>
+                        <button class="add-to-cart" data-name="Canned Tuna" data-price="80.00" data-image="canned_tuna.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/canned_fruit.jpg" alt="Canned Fruit">
+                        <h3>Canned Fruit</h3>
+                        <p class="category">Canned Goods</p>
+                        <p class="price">₹75.00/can</p>
+                        <button class="add-to-cart" data-name="Canned Fruit" data-price="75.00" data-image="canned_fruit.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/canned_beans.jpg" alt="Canned Beans">
+                        <h3>Canned Beans</h3>
+                        <p class="category">Canned Goods</p>
+                        <p class="price">₹45.00/can</p>
+                        <button class="add-to-cart" data-name="Canned Beans" data-price="45.00" data-image="canned_beans.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/canned_vegetables.jpg" alt="Canned Vegetables">
+                        <h3>Canned Vegetables</h3>
+                        <p class="category">Canned Goods</p>
+                        <p class="price">₹55.00/can</p>
+                        <button class="add-to-cart" data-name="Canned Vegetables" data-price="55.00" data-image="canned_vegetables.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/pasta_sauce.jpg" alt="Pasta Sauce">
+                        <h3>Pasta Sauce</h3>
+                        <p class="category">Canned Goods</p>
+                        <p class="price">₹70.00/jar</p>
+                        <button class="add-to-cart" data-name="Pasta Sauce" data-price="70.00" data-image="pasta_sauce.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="dairy">
+                <h3>Dairy</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/butter.jpg" alt="Butter">
+                        <h3>Butter (200g)</h3>
+                        <p class="category">Dairy</p>
+                        <p class="price">₹80.00</p>
+                        <button class="add-to-cart" data-name="Butter (200g)" data-price="80.00" data-image="butter.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/cheese.jpg" alt="Cheese">
+                        <h3>Cheese (200g)</h3>
+                        <p class="category">Dairy</p>
+                        <p class="price">₹120.00</p>
+                        <button class="add-to-cart" data-name="Cheese (200g)" data-price="120.00" data-image="cheese.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/eggs.jpg" alt="Eggs">
+                        <h3>Eggs (Dozen)</h3>
+                        <p class="category">Dairy</p>
+                        <p class="price">₹70.00</p>
+                        <button class="add-to-cart" data-name="Eggs (Dozen)" data-price="70.00" data-image="eggs.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/milk.jpg" alt="Milk">
+                        <h3>Milk (1L)</h3>
+                        <p class="category">Dairy</p>
+                        <p class="price">₹55.00</p>
+                        <button class="add-to-cart" data-name="Milk (1L)" data-price="55.00" data-image="milk.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/yogurt.jpg" alt="Yogurt">
+                        <h3>Yogurt (500g)</h3>
+                        <p class="category">Dairy</p>
+                        <p class="price">₹60.00</p>
+                        <button class="add-to-cart" data-name="Yogurt (500g)" data-price="60.00" data-image="yogurt.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <!--<section class="product-category" id="meat">
+                <h3>Meat</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/chicken.jpg" alt="Chicken">
+                        <h3>Chicken (1kg)</h3>
+                        <p class="category">Meat</p>
+                        <p class="price">₹250.00/kg</p>
+                        <button class="add-to-cart" data-name="Chicken (1kg)" data-price="250.00" data-image="chicken.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/mutton.jpg" alt="Mutton">
+                        <h3>Mutton (1kg)</h3>
+                        <p class="category">Meat</p>
+                        <p class="price">₹450.00/kg</p>
+                        <button class="add-to-cart" data-name="Mutton (1kg)" data-price="450.00" data-image="mutton .jpg">Add to Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="./cart/beef.jpg" alt="Beef">
+                        <h3>Beef (1kg)</h3>
+                        <p class="category">Meat</p>
+                        <p class="price">₹350.00/kg</p>
+                        <button class="add-to-cart" data-name="Beef (1kg)" data-price="350.00" data-image="beef.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>-->
+
+            <section class="product-category" id="fish-seafood">
+                <h3>Fish & Seafood</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/salmon.jpg" alt="Salmon">
+                        <h3>Salmon (500g)</h3>
+                        <p class="category">Fish & Seafood</p>
+                        <p class="price">₹400.00/500g</p>
+                        <button class="add-to-cart" data-name="Salmon (500g)" data-price="400.00" data-image="salmon.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/shrimp.jpg" alt="Shrimp">
+                        <h3>Shrimp (500g)</h3>
+                        <p class="category">Fish & Seafood</p>
+                        <p class="price">₹350.00/500g</p>
+                        <button class="add-to-cart" data-name="Shrimp (500g)" data-price="350.00" data-image="shrimp.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/tuna.jpg" alt="Tuna">
+                        <h3>Tuna (Steak)</h3>
+                        <p class="category">Fish & Seafood</p>
+                        <p class="price">₹200.00/piece</p>
+                        <button class="add-to-cart" data-name="Tuna (Steak)" data-price="200.00" data-image="tuna.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/crab.jpg" alt="Crab">
+                        <h3>Crab (500g)</h3>
+                        <p class="category">Fish & Seafood</p>
+                        <p class="price">₹450.00/500g</p>
+                        <button class="add-to-cart" data-name="Crab (500g)" data-price="450.00" data-image="crab.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="deli">
+                <h3>Deli</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/salami.jpg" alt="Salami">
+                        <h3>Salami (250g)</h3>
+                        <p class="category">Deli</p>
+                        <p class="price">₹180.00</p>
+                        <button class="add-to-cart" data-name="Salami (250g)" data-price="180.00" data-image="salami.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/deli_cheese.jpg" alt="Deli Cheese">
+                        <h3>Deli Cheese (200g)</h3>
+                        <p class="category">Deli</p>
+                        <p class="price">₹150.00</p>
+                        <button class="add-to-cart" data-name="Deli Cheese (200g)" data-price="150.00" data-image="deli_cheese.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="condiments-spices">
+                <h3>Condiments & Spices</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/black_pepper.jpg" alt="Black Pepper">
+                        <h3>Black Pepper (100g)</h3>
+                        <p class="category">Condiments & Spices</p>
+                        <p class="price">₹75.00</p>
+                        <button class="add-to-cart" data-name="Black Pepper (100g)" data-price="75.00" data-image="black_pepper.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/oregano.jpg" alt="Oregano">
+                        <h3>Oregano (50g)</h3>
+                        <p class="category">Condiments & Spices</p>
+                        <p class="price">₹60.00</p>
+                        <button class="add-to-cart" data-name="Oregano (50g)" data-price="60.00" data-image="oregano.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/cinnamon.jpg" alt="Cinnamon">
+                        <h3>Cinnamon (50g)</h3>
+                        <p class="category">Condiments & Spices</p>
+                        <p class="price">₹80.00</p>
+                        <button class="add-to-cart" data-name="Cinnamon (50g)" data-price="80.00" data-image="cinnamon.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/sugar.jpg" alt="Sugar">
+                        <h3>Sugar (1kg)</h3>
+                        <p class="category">Condiments & Spices</p>
+                        <p class="price">₹40.00</p>
+                        <button class="add-to-cart" data-name="Sugar (1kg)"data-price="40.00" data-image="sugar.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="snacks">
+                <h3>Snacks</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/chips.jpg" alt="Chips">
+                        <h3>Potato Chips</h3>
+                        <p class="category">Snacks</p>
+                        <p class="price">₹35.00</p>
+                        <button class="add-to-cart" data-name="Potato Chips" data-price="35.00" data-image="chips.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/pretzels.jpg" alt="Pretzels">
+                        <h3>Pretzels</h3>
+                        <p class="category">Snacks</p>
+                        <p class="price">₹40.00</p>
+                        <button class="add-to-cart" data-name="Pretzels" data-price="40.00" data-image="pretzels.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/popcorn.jpg" alt="Popcorn">
+                        <h3>Popcorn</h3>
+                        <p class="category">Snacks</p>
+                        <p class="price">₹25.00</p>
+                        <button class="add-to-cart" data-name="Popcorn" data-price="25.00" data-image="popcorn.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/crackers.jpg" alt="Crackers">
+                        <h3>Crackers</h3>
+                        <p class="category">Snacks</p>
+                        <p class="price">₹50.00</p>
+                        <button class="add-to-cart" data-name="Crackers" data-price="50.00" data-image="crackers.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="bread-bakery">
+                <h3>Bread & Bakery</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/bread.jpg" alt="Bread">
+                        <h3>White Bread</h3>
+                        <p class="category">Bread & Bakery</p>
+                        <p class="price">₹45.00</p>
+                        <button class="add-to-cart" data-name="White Bread" data-price="45.00" data-image="bread.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/tortillas.jpg" alt="Tortillas">
+                        <h3>Tortillas (Pack)</h3>
+                        <p class="category">Bread & Bakery</p>
+                        <p class="price">₹60.00</p>
+                        <button class="add-to-cart" data-name="Tortillas (Pack)" data-price="60.00" data-image="tortillas.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/muffins.jpg" alt="Muffins">
+                        <h3>Muffins (4 pack)</h3>
+                        <p class="category">Bread & Bakery</p>
+                        <p class="price">₹90.00</p>
+                        <button class="add-to-cart" data-name="Muffins (4 pack)" data-price="90.00" data-image="muffins.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/bagels.jpg" alt="Bagels (4 pack)">
+                        <h3>Bagels (4 pack)</h3>
+                        <p class="category">Bread & Bakery</p>
+                        <p class="price">₹100.00</p>
+                        <button class="add-to-cart" data-name="Bagels (4 pack)" data-price="100.00" data-image="bagels.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="beverages">
+                <h3>Beverages</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/coffee.jpg" alt="Coffee">
+                        <h3>Coffee (200g)</h3>
+                        <p class="category">Beverages</p>
+                        <p class="price">₹120.00</p>
+                        <button class="add-to-cart" data-name="Coffee (200g)" data-price="120.00" data-image="coffee.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/tea.jpg" alt="Tea Bags (Pack)">
+                        <h3>Tea Bags (Pack)</h3>
+                        <p class="category">Beverages</p>
+                        <p class="price">₹80.00</p>
+                        <button class="add-to-cart" data-name="Tea Bags (Pack)" data-price="80.00" data-image="tea.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/juice.jpg" alt="Juice (1L)">
+                        <h3>Juice (1L)</h3>
+                        <p class="category">Beverages</p>
+                        <p class="price">₹95.00</p>
+                        <button class="add-to-cart" data-name="Juice (1L)" data-price="95.00" data-image="juice.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/soda.jpg" alt="Soda (Can)">
+                        <h3>Soda (Can)</h3>
+                        <p class="category">Beverages</p>
+                        <p class="price">₹40.00</p>
+                        <button class="add-to-cart" data-name="Soda (Can)" data-price="40.00" data-image="soda.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="pasta-rice-cereal">
+                <h3>Pasta, Rice & Cereal</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/oats.jpg" alt="Oats (1kg)">
+                        <h3>Oats (1kg)</h3>
+                        <p class="category">Pasta, Rice & Cereal</p>
+                        <p class="price">₹70.00</p>
+                        <button class="add-to-cart" data-name="Oats (1kg)" data-price="70.00" data-image="oats.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/rice.jpg" alt="Basmati Rice (1kg)">
+                        <h3>Basmati Rice (1kg)</h3>
+                        <p class="category">Pasta, Rice & Cereal</p>
+                        <p class="price">₹80.00</p>
+                        <button class="add-to-cart" data-name="Basmati Rice (1kg)" data-price="80.00" data-image="rice.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/macaroni.jpg" alt="Macaroni (500g)">
+                        <h3>Macaroni (500g)</h3>
+                        <p class="category">Pasta, Rice & Cereal</p>
+                        <p class="price">₹65.00</p>
+                        <button class="add-to-cart" data-name="Macaroni (500g)" data-price="65.00" data-image="macaroni.jpg">Add to Cart</button>
+</section>
+
+            <section class="product-category" id="household-cleaning-supplies">
+                <h3>Household & Cleaning Supplies</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/detergent.jpg" alt="Detergent (1kg)">
+                        <h3>Detergent (1kg)</h3>
+                        <p class="category">Household & Cleaning Supplies</p>
+                        <p class="price">₹180.00</p>
+                        <button class="add-to-cart" data-name="Laundry Detergent (1kg)" data-price="180.00" data-image="detergent.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/dish_soap.jpg" alt="Dish Soap">
+                        <h3>Dish Soap</h3>
+                        <p class="category">Household &Cleaning Supplies</p>
+                        <p class="price">₹75.00</p>
+                        <button class="add-to-cart" data-name="Dish Soap" data-price="75.00" data-image="dish_soap.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/paper_towels.jpg" alt="Paper Towels (Roll)">
+                        <h3>Paper Towels (Roll)</h3>
+                        <p class="category">Household & Cleaning Supplies</p>
+                        <p class="price">₹90.00</p>
+                        <button class="add-to-cart" data-name="Paper Towels (Roll)" data-price="90.00" data-image="paper_towels.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/trash_bags.jpg" alt="Trash Bags (Pack)">
+                        <h3>Trash Bags (Pack)</h3>
+                        <p class="category">Household & Cleaning Supplies</p>
+                        <p class="price">₹120.00</p>
+                        <button class="add-to-cart" data-name="Trash Bags (Pack)" data-price="120.00" data-image="trash_bags.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="baby-items">
+                <h3>Baby Items</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/baby_food.jpg" alt="Baby Food (Jar)">
+                        <h3>Baby Food (Jar)</h3>
+                        <p class="category">Baby Items</p>
+                        <p class="price">₹60.00</p>
+                        <button class="add-to-cart" data-name="Baby Food (Jar)" data-price="60.00" data-image="baby_food.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/diapers.jpg" alt="Diapers (Small Pack)">
+                        <h3>Diapers (Small Pack)</h3>
+                        <p class="category">Baby Items</p>
+                        <p class="price">₹220.00</p>
+                        <button class="add-to-cart" data-name="Diapers (Small Pack)" data-price="220.00" data-image="diapers.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/wet_wipes.jpg" alt="Wet Wipes (Pack)">
+                        <h3>Wet Wipes (Pack)</h3>
+                        <p class="category">Baby Items</p>
+                        <p class="price">₹80.00</p>
+                        <button class="add-to-cart" data-name="Wet Wipes (Pack)" data-price="80.00" data-image="wet_wipes.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/baby_lotion.jpg" alt="Baby Lotion">
+                        <h3>Baby Lotion</h3>
+                        <p class="category">Baby Items</p>
+                        <p class="price">₹110.00</p>
+                        <button class="add-to-cart" data-name="Baby Lotion" data-price="110.00" data-image="baby_lotion.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-category" id="pet-care">
+                <h3>Pet Care</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./cart/pet_food.jpg" alt="Dog Food (1kg)">
+                        <h3>Dog Food (1kg)</h3>
+                        <p class="category">Pet Care</p>
+                        <p class="price">₹130.00</p>
+                        <button class="add-to-cart" data-name="Dog Food (1kg)" data-price="130.00" data-image="pet_food.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/kitty_litter.jpg" alt="Kitty Litter">
+                        <h3>Kitty Litter</h3>
+                        <p class="category">Pet Care</p>
+                        <p class="price">₹160.00</p>
+                        <button class="add-to-cart" data-name="Kitty Litter" data-price="160.00" data-image="kitty_litter.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/chew_toy.jpg" alt="Chew Toy">
+                        <h3>Chew Toy</h3>
+                        <p class="category">Pet Care</p>
+                        <p class="price">₹70.00</p>
+                        <button class="add-to-cart" data-name="Chew Toy" data-price="70.00" data-image="chew_toy.jpg">Add to Cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="./cart/pet_shampoo.jpg" alt="Pet Shampoo">
+                        <h3>Pet Shampoo</h3>
+                        <p class="category">Pet Care</p>
+                        <p class="price">₹95.00</p>
+                        <button class="add-to-cart" data-name="Pet Shampoo" data-price="95.00" data-image="pet_shampoo.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
