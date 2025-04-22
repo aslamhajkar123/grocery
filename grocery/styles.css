@@ -1,80 +1,70 @@
-/* Base styles for both mobile and desktop */
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #5ec3e4, #c2f0fc);
     margin: 0;
     padding: 0;
+
     text-align: center;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically by default for mobile */
-    align-items: center; /* Center items horizontally */
-    min-height: 100vh; /* Ensure body takes at least the full viewport height */
 }
+
 
 header {
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px; /* Less horizontal padding for mobile */
+    padding: 15px 30px;
     background: #1976D2;
     color: white;
     align-items: center;
-    width: 100%; /* Full width for mobile */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+
 }
 
 .logo {
-    font-size: 20px; /* Slightly smaller logo for mobile */
-}
-
-nav {
-    display: none; /* Hide navigation on mobile by default */
+    font-size: 24px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px; /* Less margin for mobile */
+    margin: 0 15px;
 }
 
 .cart-icon {
     position: relative;
-    margin-left: 15px; /* Add some space for the cart icon */
 }
 
 #cart-count {
     background: red;
     color: white;
-    padding: 2px 5px; /* Slightly smaller padding for mobile */
+    padding: 2px 6px;
     border-radius: 50%;
-    font-size: 10px; /* Smaller font size for mobile */
+    font-size: 12px;
     position: absolute;
-    top: -3px;
-    right: -8px;
+    top: -5px;
+    right: -10px;
 }
 
 .sign-in-btn {
     background: white;
     color: #1976D2;
     border: none;
-    padding: 8px 12px; /* Slightly less padding for mobile */
+    padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Adjust font size */
 }
 
+
 .login-container {
-    width: 90%; /* Take up more width on mobile */
+    width: 350px;
     background: white;
-    padding: 20px; /* Less padding for mobile */
-    margin: 20px auto; /* Less top/bottom margin for mobile */
-    border-radius: 8px; /* Slightly smaller border-radius for mobile */
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Subtler shadow for mobile */
+    padding: 25px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .login-container h2 {
     color: #333;
-    font-size: 20px; /* Adjust heading size for mobile */
-    margin-bottom: 15px;
 }
 
 .google-btn {
@@ -83,142 +73,50 @@ nav a {
     justify-content: center;
     background: white;
     border: 1px solid #ddd;
-    padding: 8px; /* Less padding for mobile */
+    padding: 10px;
     width: 100%;
     cursor: pointer;
-    font-size: 14px; /* Adjust font size */
 }
 
 .google-btn img {
-    width: 16px; /* Slightly smaller Google icon for mobile */
-    margin-right: 8px;
+    width: 18px;
+    margin-right: 10px;
 }
 
 .or-text {
-    margin: 10px 0; /* Less margin for mobile */
-    font-size: 12px; /* Smaller font size for mobile */
+    margin: 15px 0;
+    font-size: 14px;
     color: #777;
 }
 
 .input-group {
     text-align: left;
-    margin-bottom: 12px; /* Less margin for mobile */
+    margin-bottom: 15px;
 }
 
 .input-group label {
     display: block;
-    font-size: 12px; /* Smaller font size for mobile */
-    margin-bottom: 3px;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .input-group input {
     width: 100%;
-    padding: 8px; /* Less padding for mobile */
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px; /* Slightly smaller border-radius for mobile */
-    font-size: 14px; /* Adjust font size */
+    border-radius: 5px;
 }
 
 .btn {
     width: 100%;
-    padding: 8px; /* Less padding for mobile */
+    padding: 10px;
     background: #673AB7;
     color: white;
     border: none;
-    border-radius: 4px; /* Slightly smaller border-radius for mobile */
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Adjust font size */
 }
 
 .btn:hover {
     background: #5E35B1;
-}
-
-/* Desktop-specific styles using a media query */
-@media (min-width: 768px) {
-    body {
-        text-align: left; /* Align body text to the left on desktop */
-    }
-
-    header {
-        padding: 15px 30px; /* More horizontal padding for desktop */
-    }
-
-    .logo {
-        font-size: 24px; /* Larger logo for desktop */
-    }
-
-    nav {
-        display: flex; /* Show navigation on desktop */
-    }
-
-    nav a {
-        margin: 0 15px; /* More margin for desktop navigation links */
-        font-size: 16px; /* Larger font size for desktop navigation links */
-    }
-
-    .cart-icon {
-        margin-left: 30px; /* More space for the cart icon on desktop */
-    }
-
-    #cart-count {
-        padding: 2px 6px;
-        font-size: 12px;
-        top: -5px;
-        right: -10px;
-    }
-
-    .sign-in-btn {
-        padding: 8px 15px;
-        font-size: 16px;
-    }
-
-    .login-container {
-        width: 350px; /* Fixed width for the login container on desktop */
-        padding: 25px; /* More padding for desktop */
-        margin: 50px auto; /* More top/bottom margin for desktop */
-        border-radius: 10px; /* Larger border-radius for desktop */
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* More pronounced shadow for desktop */
-    }
-
-    .login-container h2 {
-        font-size: 24px; /* Larger heading size for desktop */
-        margin-bottom: 20px;
-    }
-
-    .google-btn {
-        padding: 10px;
-        font-size: 16px;
-    }
-
-    .google-btn img {
-        width: 18px; /* Larger Google icon for desktop */
-        margin-right: 10px;
-    }
-
-    .or-text {
-        margin: 15px 0;
-        font-size: 14px;
-    }
-
-    .input-group {
-        margin-bottom: 15px;
-    }
-
-    .input-group label {
-        font-size: 14px;
-        margin-bottom: 5px;
-    }
-
-    .input-group input {
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-
-    .btn {
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 16px;
-    }
 }
